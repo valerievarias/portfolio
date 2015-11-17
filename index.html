@@ -25,6 +25,7 @@
         <script type="text/javascript" src="js/jquery.sticky.js"></script>
         <script type="text/javascript" src="js/fadescrolling.js"></script>
         <script type="text/javascript" src="js/viewportchecker.js"></script>
+        <script type="text/javascript" src="js/validate-form.js"></script>
 
 
        
@@ -71,7 +72,7 @@
 
 	});
 	</script>
-        
+
         
         
     </head>
@@ -195,7 +196,23 @@
 
                     Feel free to send me a message, I'll try to get back to you as soon as possible.
                 </p>
-                <div class="social">
+                
+            </div>
+            <div class="contactForm"
+                <form id="form" action="" method="" name="">
+                    <input type="text" name="voornaam" id="voornaam" value="" placeholder="Full name*" onblur="voornaam()">
+                    <br>
+                    <input type="text" name="email" id="email" value="" placeholder="E-mail*" onblur="email()">
+                    <br>
+                    <input type="text" name="subject" id="onderwerp" value="" placeholder="Subject*" onblur="onderwerp()">
+                    <br>
+                    <textarea id="bericht" name="message" placeholder="Message" onblur="bericht()"></textarea>
+                    <br><br>
+                    <input type="submit" name="submit" id="verzenden" value="Submit">
+
+                </form>
+            </div>    
+            <div class="social">
                     <div class="sc">
                         <a href="mailto:valerievarias@gmail.com" target="_blank">
                             <img src="img/email.png">
@@ -212,12 +229,13 @@
                         </a>
                     </div>
                 </div>
-            </div>
         </div>
        
     </div>
     <footer>&nbsp;</footer>
         
+
+
 <!--Responsive text-->
 <script src="js/flowtype.js"></script>
 <script src="js/responsive-text.js"></script>

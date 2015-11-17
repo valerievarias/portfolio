@@ -168,7 +168,7 @@ nav ul li a:hover {
 }
 
 .thumb .title {
-    cursor: pointer;
+  cursor: pointer;
   font-size: 2.5em;
   text-transform: uppercase;
   opacity: 0;
@@ -244,20 +244,13 @@ nav ul li a:hover {
     margin: 2% auto;
 }
 
-.contact {
-    text-align: center;
-    padding: 5% 2%;
+.social {
+  background: #fff;
 }
 
-.contact h1 {
-    font-size: 4em;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.contact p {
-    font-size: 16px;
-    padding: 2% 0;
+.three {
+    background: #1a0145;
+    color: #fff;
 }
 
 .sc {
@@ -269,8 +262,64 @@ nav ul li a:hover {
 }
 
 footer {
-    background: #1a0145 ;
+  background: #1a0145 ;
 }
+
+/* ------------------------------------------- CONTACT FORM ------------------------------------------- */
+
+.contact {
+    text-align: center;
+    padding: 5% 2% 2%;
+
+}
+
+.contact h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contact p {
+    font-size: 16px;
+    padding: 2% 0;
+
+}
+
+.contactForm {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+::-moz-placeholder { font-size: 20px;} /* Firefox 19+ */
+:-moz-placeholder {font-size: 20px;}  /* Firefox 18- */
+:-ms-input-placeholder {font-size: 20px;} /* IE */
+
+.contactForm input[type="text"] {
+  width: 100%;
+  margin: 3px 0 10px;
+  padding: 2%;
+  border-radius: 3px;
+  border: none;
+}
+
+.contactForm textarea {
+  width: 100%;
+  padding: 2%;
+  min-height: 150px;
+  margin: 3px 0 10px;
+  border-radius: 3px;
+}
+
+.contactForm input[type="submit"] {
+  background: #fff;
+  border: none;
+
+}
+
+
+
 
 /*  ------------------------------------------- MOBILE NAVIGATION ------------------------------------------- */
 
