@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Valerie Varias | Smart TV</title>
+        <meta charset="utf-8">
+        <meta name="description" content="The portfolio van Valerie Varias."> 
+        <meta name="keywords" content="amsterdam, webdesigner, interactive design, interactieve vormgeving, portfolio, front-end developer,               webdeveloper, designer, design, varias, valvarias, Valerie Varias, web design"> 
+        <meta name="author" content="VVARIAS">
+        <meta name="ROBOTS" content="INDEX,FOLLOW"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1">
+        <meta name = "apple-mobile-web-app-capable" content = "yes" />
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900,100' rel='stylesheet' type='text/css'>
+        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/animate.css" rel="stylesheet" type="text/css"/>
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="../js/jquery.sticky.js"></script>
+        <script type="text/javascript" src="../js/fadescrolling.js"></script>
+        <script type="text/javascript" src="../js/viewportchecker.js"></script>
+
+       
+        <script>
+            $(window).load(function(){
+              $("nav").sticky({ topSpacing: 0 });
+            });
+        </script>
+        
+        <script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery('.fadeLeft').addClass("hidden").viewportChecker({
+				classToAdd: 'visible animated bounceInLeft', // Class to add to the elements when they are visible
+				offset: 100    
+			}); 
+
+			jQuery('.fadeRight').addClass("hidden").viewportChecker({
+				classToAdd: 'visible animated bounceInRight', // Class to add to the elements when they are visible
+				offset: 100    
+			});
+		});            
+	</script>
+        
+        <script type="text/javascript">
+		$(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {
+			e.preventDefault();
+
+			var target = this.hash;
+			var $target = $(target);
+
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, 900, 'swing', function () {
+				window.location.hash = target;
+			});
+		});
+			
+			jQuery(document).ready(function($) {
+			   $('.menu-link').click(function(e) {
+				  $('html, body').stop();
+			   });
+});
+
+	});
+	</script>
+        
+    </head>
+<body>
+    <div id="page-wrapper">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../img/work/cv.pdf" target="_blank">CV</a></li>
+                <li><a href="#contact">Get in touch</a></li>
+            </ul>
+        </nav>
+        <div id="section" class="two">
+            <div class="work-container">
+                <div class="first hf">
+                    <img src="../img/work/smarttv/smarttv.png">
+                </div>
+                <div class="left-container fadeLeft ">
+                    <div>
+                        <img src="../img/work/smarttv/smarttv.jpg">
+                    </div>
+                </div>
+                <div class="right-container fadeRight">
+                    <div>
+                        <img src="../img/work/smarttv/smarttv2.jpg">
+                    </div>
+                </div>
+            </div>
+        </div><div id="section" class="three">
+            <div class="contact fadeLeft" id="contact">
+                <h1>Get in touch</h1>
+                <p>
+                    I'm a 23 year old webdesigner living in Amsterdam, Netherlands. Graduated as a Interactive Designer in 2014.<br>
+                    Motivated ,fast-learner and self-learner. Can able to work with team.<br>
+                    I worked for a year in Digimo Media as a webdesigner. My job was to design en build email templates, landings pages and banners.<br><br>
+                    
+                    I'm now currently looking for a full-time job as a web designer.
+
+                    Feel free to send me a message, I'll try to get back to you as soon as possible.
+                </p>
+                <div class="social">
+                    <div class="sc">
+                        <a href="mailto:valerievarias@gmail.com" target="_blank">
+                            <img src="../img/email.png">
+                        </a>
+                    </div>
+                    <div class="sc">
+                        <a href="https://nl.linkedin.com/pub/valerie-varias/99/837/549" target="_blank">
+                            <img src="../img/ln.png">
+                        </a>
+                    </div>
+                    <div class="sc">
+                        <a href="https://www.facebook.com/isaunone" target="_blank">
+                            <img src="../img/fb.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        
+
+<footer>&nbsp;</footer>
+</body>
+</html>

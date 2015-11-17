@@ -1,0 +1,370 @@
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background: #fff;
+    font-family: Arial;
+    height: 100%;
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+}
+
+#page-wrapper {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.header {
+    background: url(../img/bg1.jpg)left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.intro {
+    color: #fff;
+    text-align: center;
+    padding: 16% 0;
+}
+
+.intro h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 7em;
+    border-bottom: solid #fff 1px;
+    width: 50%;
+    margin: 0 auto;
+    text-rendering: optimizeLegibility;
+}
+
+.intro h2 {
+    font-family: 'Lobster', cursive;
+    font-weight: normal;
+    font-size: 3em;
+}
+
+nav {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 0.5% 0;
+    z-index: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-right: 3%;
+}
+
+nav ul li a:hover {
+    color: #300679  ;
+}
+
+.work {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumb {
+    cursor: pointer;
+    width: 25%;
+    display: inline-block;
+    position: relative;
+    float: left;
+
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.thumb:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.thumb img {
+    display: block;
+}
+
+
+.thumb img {
+    
+ /* position: absolute;*/
+  left: 0;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.thumb .overbox {
+    
+  background-color: rgba(0, 0, 0, 0.83);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  z-index: 100;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  opacity: 0;
+  width: 100%;
+ /* height: 100%;*/
+    padding: 42.5% 0;
+    text-align: center;
+}
+
+.thumb:hover .overbox { opacity: 1; }
+
+.thumb .overtext {
+
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+}
+
+.thumb .title {
+    cursor: pointer;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition-delay: 0.1s;
+  transition-duration: 0.2s;
+}
+
+.thumb:hover .title,
+.thumb:focus .title {
+  opacity: 1;
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+}
+
+.thumb .tagline {
+  font-size: 1.2em;
+  opacity: 0;
+  transition-delay: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.thumb:hover .tagline,
+.thumb:focus .tagline {
+  opacity: 1;
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+}
+
+#content-container {
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+.work-container {
+    width: 100%;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+.work-container .first {
+    text-align: center;
+    width: 100%;
+}
+
+.hf {
+    text-align: center;
+    padding: 3% 0;
+    background: #1a0145;
+}
+
+.work-container .images img {
+    display: block;
+}
+
+.left-container {
+    width: 50%;
+    float: left;
+}
+
+.left-container > div {
+    width: 90%;
+    margin: 2% auto;
+}
+
+.right-container {
+    width: 50%;
+    float: left;
+}
+
+.right-container > div {
+    width: 90%;
+    margin: 2% auto;
+}
+
+.contact {
+    text-align: center;
+    padding: 5% 2%;
+}
+
+.contact h1 {
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contact p {
+    font-size: 16px;
+    padding: 2% 0;
+}
+
+.sc {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    margin: 2% auto;
+        
+}
+
+footer {
+    background: #1a0145 ;
+}
+
+/*  ------------------------------------------- MOBILE NAVIGATION ------------------------------------------- */
+
+
+/*  ------------------------------------------- R E S P O N S I V E  ------------------------------------------- */
+
+@media screen and (max-width: 800px) {
+    
+    .thumb {
+        width: 50%;
+    }
+    
+    .contact h1 {
+        font-size: 3em;
+    }
+    
+    .sc {
+        width: 20%;
+    }
+    
+    .left-container, .right-container {
+        width: 100%;
+    }
+    
+    .left-container > div {
+        width: 95%;
+        margin: 2% auto;
+    }
+    
+    .right-container > div {
+        width: 95%;
+        margin: 0% auto 1%;
+    }
+    
+    .contact p {
+        text-align: left;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    
+    .header2 {
+        background: url(../img/bg1.jpg)top no-repeat;
+        background-size: cover;
+        display: block!important;
+        
+    }
+    
+    .header {
+        display: none;
+    }
+    
+    .sc {
+        width: 30%;
+    }
+    
+    .thumb .title {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .intro h1 {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    nav ul li {
+        font-size: 1.6em;
+    }
+    
+    .thumb .title {
+        font-size: 1.7em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    
+    .intro h1 {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .thumb {
+        width: 100%;
+    }
+    
+    .thumb .overbox {
+        padding: 45% 0;
+    }
+}
