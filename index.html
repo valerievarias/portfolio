@@ -12,7 +12,8 @@
         <meta name = "apple-mobile-web-app-capable" content = "yes" />
         
         <link rel="shortcut icon" href="img/favicon.ico">
-        
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,900,100' rel='stylesheet' type='text/css'>
@@ -200,15 +201,23 @@
             </div>
             <div class="contactForm"
                 <form id="form" action="" method="" name="">
-                    <input type="text" name="voornaam" id="voornaam" value="" placeholder="Full name*" onblur="voornaam()">
+                    <div class="dv_input" id="dv_input">
+                        <input type="text" name="voornaam" id="voornaam" placeholder="Full name*" onkeyup="validateName()">
+                        <i class="fa fa-check"></i> 
+                        <label id="voornaamPrompt"></label>
+                    </div> 
                     <br>
-                    <input type="text" name="email" id="email" value="" placeholder="E-mail*" onblur="email()">
+                    <div class="dv_input">
+                        <input type="text" name="email" id="email" placeholder="E-mail*" onkeyup="validateEmail()">
+                        <label id="emailPrompt"></label>
+                        <i class="fa fa-check"></i> 
+                    </div>    
                     <br>
-                    <input type="text" name="subject" id="onderwerp" value="" placeholder="Subject*" onblur="onderwerp()">
+                    <input type="text" name="subject" id="onderwerp" placeholder="Subject*" onkeyup="validateSubject()"><label id="onderwerpPrompt"></label>
                     <br>
-                    <textarea id="bericht" name="message" placeholder="Message" onblur="bericht()"></textarea>
+                    <textarea id="bericht" name="message" placeholder="Message" onkeyup="validateMessage()"></textarea><label id="berichtPrompt"></label>
                     <br><br>
-                    <input type="submit" name="submit" id="verzenden" value="Submit">
+                    <input type="submit" name="submit" id="verzenden" value="Submit" onclick="validateSend()">
 
                 </form>
             </div>    
