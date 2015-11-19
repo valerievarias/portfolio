@@ -298,57 +298,26 @@ footer {
 
 .contactForm input[type="text"] {
   width: 100%;
-  margin: 3px 0 10px;
+  margin: 3px 0px;
   padding: 2%;
   border-radius: 3px;
   border: none;
 }
 
-input#voornaam::before {
-    content: "\25C0"; /* left point triangle in escaped unicode */
-    color:#d45252;
-    position: absolute;
-    top:1px;
-    left:-6px;
-}
-
 .contactForm label {
-  background: #fff;
-  width: 100%;
-  text-align: right;
+  background: #D00101;
+  color: #fff;
   position: relative;
   display: none;
-}
-
-.contactForm label:after, .contactForm label:before {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.contactForm label:after {
-  border-color: rgba(136, 183, 213, 0);
-  border-bottom-color: #88b7d5;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.contactForm label:before {
-  border-color: rgba(194, 225, 245, 0);
-  border-bottom-color: #c2e1f5;
-  border-width: 26px;
-  margin-left: -26px;
+  padding: 6px;
+  top: 6px;
 }
 
 .contactForm textarea {
   width: 100%;
+  margin: 3px 0px;
   padding: 2%;
   min-height: 150px;
-  margin: 3px 0 10px;
   border-radius: 3px;
 }
 
@@ -362,15 +331,44 @@ input#voornaam::before {
   position: relative;
 }
 
-.fa-check {
-  color: green;
+#nFormValid, #nFormError, #eFormValid, #eFormError, #sFormValid, #sFormError    {
+  display: none;
+}
+
+.hideError {
+  display: none;
+}
+
+.fa {
   font-size: 18px;
   position: absolute;
-  right: 0;
+  right: -10px;
   top: 15px;
 }
 
+.fa-check {
+  color: #06D406;
+}
 
+.fa-times {
+  color: #D00101; 
+}
+
+input:focus {
+  box-shadow: none;
+  outline: 0;
+  border: 0;
+}
+
+.has-error {
+  border: 1px solid #D00101!important;
+  box-shadow: 0px 0px 6px 1px rgba(208, 1, 1, 0.7)!important;
+}
+
+.has-success {
+  border: 1px solid #06D406!important;
+  box-shadow: 0 0 6px 1px rgba(6, 212, 6, 0.7)!important;
+}
 
 
 /*  ------------------------------------------- MOBILE NAVIGATION ------------------------------------------- */

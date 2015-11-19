@@ -1,19 +1,54 @@
+function showLabel(id) {
+	document.getElementById(id).style.display = "inline-block";
+}
+
+function hideLabel(id) {
+	document.getElementById(id).style.display = "none";
+}
+
+function errorField(id) {
+	document.getElementById(id).className = "has-error";
+}
+
+function validField(id) {
+	document.getElementById(id).className = "has-success";
+}
+/*
+function valSuc(id) {
+	document.getElementById(id).className = "fa fa-check";
+}
+
+function valEr(id) {
+	document.getElementById(id).className = "fa fa-times";
+}
+*/
+
+
 function validateName() {
 
 	var voornaam = document.getElementById("voornaam").value;
 
 	if(voornaam.length == 0) {
 		showLabel("voornaamPrompt");
-		messagePrompt("Name is required", "voornaamPrompt", "red");
+		showLabel("nFormError");
+		errorField("voornaam");
+		messagePrompt("Name is required", "voornaamPrompt");
 		return false;
 	}
-	if(!voornaam.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+	if(!voornaam.match(/^[A-Za-z]*.\s.*/)) {
 		showLabel("voornaamPrompt");
-		messagePrompt("First and Last name please", "voornaamPrompt", "red");
+		showLabel("nFormError");
+		hideLabel("nFormValid");
+		errorField("voornaam");
+		messagePrompt("Please enter First and Last name", "voornaamPrompt");
 		return false;
 	}
-	messagePrompt("Hi " + voornaam, "voornaamPrompt", "green");
-		return true;
+	showLabel("nFormValid");
+	hideLabel("nFormError");
+	validField("voornaam");
+	hideLabel("voornaamPrompt");
+
+	return true;
 }
 
 function validateEmail() {
@@ -21,15 +56,24 @@ function validateEmail() {
 	var email = document.getElementById("email").value;
 
 	if(email.length == 0) {
-		messagePrompt("Email is required", "emailPrompt", "red");
+		showLabel("emailPrompt");
+		showLabel("eFormError");
+		errorField("email");
+		messagePrompt("Email is required", "emailPrompt", "white");
 		return false;
 	}
 	if(!email.match(/^[A-Za-z\._\-0-9]*@[A-Za-z]*[\.][a-z]{2,10}$/)) {
-		messagePrompt("Please enter valid email address, e.g. example@email.com", "emailPrompt", "red");
+		showLabel("emailPrompt");
+		errorField("email");
+		showLabel("eFormError");
+		hideLabel("eFormValid");
+		messagePrompt("Please enter valid email address, e.g. example@email.com", "emailPrompt", "white");
 		return false;
 	}
-
-	messagePrompt("Valid email",  "emailPrompt", "green");
+	showLabel("eFormValid");
+	hideLabel("eFormError");
+	validField("email");
+	hideLabel("emailPrompt");
 	return true;
 
 }
@@ -39,11 +83,18 @@ function validateSubject() {
 	var onderwerp = document.getElementById("onderwerp").value;
 
 	if(onderwerp.length == 0) {
-		messagePrompt("Subject is required", "onderwerpPrompt", "red");
+		showLabel("onderwerpPrompt");
+		showLabel("sFormError");
+		hideLabel("sFormValid");
+		errorField("onderwerp");
+		messagePrompt("Subject is required", "onderwerpPrompt", "white");
 		return false;
 	}
 
-	messagePrompt("Subject valid", "onderwerpPrompt", "green");
+	showLabel("sFormValid");
+	hideLabel("sFormError");
+	validField("onderwerp");
+	hideLabel("onderwerpPrompt");
 	return true;
 }
 
@@ -54,17 +105,17 @@ function validateMessage() {
 	var left = required - bericht.length;
 
 	if(left > 0) {
-		messagePrompt("Atleast " + left + " charachters", "berichtPrompt", "red");
+		messagePrompt("Atleast " + left + " charachters", "berichtPrompt", "white");
 		return false;
 	}
 
 	/*if(bericht.length == 0) {
-		messagePrompt("Message required", "berichtPrompt", "red");
+		messagePrompt("Message required", "berichtPrompt", "white");
 		return false
 	}
 
 	if(!bericht.match(/^[A-Za-z]*\s.{150,}$/)) {
-		messagePrompt("Atleast 150 charachters", "berichtPrompt", "red");
+		messagePrompt("Atleast 150 charachters", "berichtPrompt", "white");
 		return false;
 	}
 	*/
@@ -80,14 +131,11 @@ function validateSend() {
 	}
 }
 
-function showLabel(id) {
-	document.getElementById(id).style.display = "block";
-}
 
 
 
-function messagePrompt(message, promptLocation, color) {
+
+function messagePrompt(message, promptLocation) {
 
 	document.getElementById(promptLocation).innerHTML = message;
-	document.getElementById(promptLocation).style.color = color;
 }

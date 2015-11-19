@@ -203,17 +203,24 @@
                 <form id="form" action="" method="" name="">
                     <div class="dv_input" id="dv_input">
                         <input type="text" name="voornaam" id="voornaam" placeholder="Full name*" onkeyup="validateName()">
-                        <i class="fa fa-check"></i> 
+                        <i class="fa fa-check" id="nFormValid"></i> 
+                        <i class="fa fa-times" id="nFormError"></i> 
                         <label id="voornaamPrompt"></label>
                     </div> 
                     <br>
                     <div class="dv_input">
                         <input type="text" name="email" id="email" placeholder="E-mail*" onkeyup="validateEmail()">
+                        <i class="fa fa-check" id="eFormValid"></i> 
+                        <i class="fa fa-times" id="eFormError"></i> 
                         <label id="emailPrompt"></label>
-                        <i class="fa fa-check"></i> 
                     </div>    
                     <br>
-                    <input type="text" name="subject" id="onderwerp" placeholder="Subject*" onkeyup="validateSubject()"><label id="onderwerpPrompt"></label>
+                    <div class="dv_input">
+                        <input type="text" name="subject" id="onderwerp" placeholder="Subject*" onkeyup="validateSubject()">
+                        <i class="fa fa-check" id="sFormValid"></i> 
+                        <i class="fa fa-times" id="sFormError"></i> 
+                        <label id="onderwerpPrompt"></label>
+                    </div>    
                     <br>
                     <textarea id="bericht" name="message" placeholder="Message" onkeyup="validateMessage()"></textarea><label id="berichtPrompt"></label>
                     <br><br>
