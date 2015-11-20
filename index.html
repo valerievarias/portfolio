@@ -222,9 +222,16 @@
                         <label id="onderwerpPrompt"></label>
                     </div>    
                     <br>
-                    <textarea id="bericht" name="message" placeholder="Message" onkeyup="validateMessage()"></textarea><label id="berichtPrompt"></label>
-                    <br><br>
-                    <input type="submit" name="submit" id="verzenden" value="Submit" onclick="validateSend()">
+                    <div class="dv_input">
+                        <textarea id="bericht" name="message" placeholder="Message" onkeyup="validateMessage()"></textarea>
+                        <i class="fa fa-check" id="mFormValid"></i> 
+                        <i class="fa fa-times" id="mFormError"></i> 
+                        <label id="berichtPrompt"></label>
+                     </div>   
+                    <br>
+                    <div class="send_btn">
+                        <input type="submit" name="submit" id="verzenden" value="Submit" onclick="validateSend()">
+                    </div>    
 
                 </form>
             </div>    
@@ -244,11 +251,18 @@
                             <img src="img/fb.png">
                         </a>
                     </div>
-                </div>
+                    <div class="copyright">
+                      &copy; Copyright 2015 Valerie Varias
+                    </div>
+
+            </div>
         </div>
        
     </div>
-    <footer>&nbsp;</footer>
+    <footer>
+        
+
+    </footer>
         
 
 

@@ -101,13 +101,22 @@ function validateSubject() {
 function validateMessage() {
 
 	var bericht = document.getElementById("bericht").value;
-	var required = 150;
+	var required = 100;
 	var left = required - bericht.length;
 
 	if(left > 0) {
+		showLabel("berichtPrompt");
+		showLabel("mFormError");
+		hideLabel("mFormValid");
 		messagePrompt("Atleast " + left + " charachters", "berichtPrompt", "white");
 		return false;
 	}
+	
+	hideLabel("berichtPrompt");
+	showLabel("mFormValid");
+	hideLabel("mFormError");
+	return true;
+	
 
 	/*if(bericht.length == 0) {
 		messagePrompt("Message required", "berichtPrompt", "white");
@@ -120,8 +129,7 @@ function validateMessage() {
 	}
 	*/
 
-	messagePrompt("Message valid", "berichtPrompt", "green");
-	return true;
+	
 }
 
 function validateSend() {
