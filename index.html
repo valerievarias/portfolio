@@ -200,33 +200,33 @@
                 
             </div>
             <div class="contactForm"
-                <form id="form" action="" method="" name="">
+                <form id="form" action="send_form.php" method="post" name="contactform">
                     <div class="dv_input" id="dv_input">
                         <input type="text" name="voornaam" id="voornaam" placeholder="Full name*" onkeyup="validateName()">
                         <i class="fa fa-check" id="nFormValid"></i> 
                         <i class="fa fa-times" id="nFormError"></i> 
-                        <label id="voornaamPrompt"></label>
+                        <label for="fullName" id="voornaamPrompt"></label>
                     </div> 
                     <br>
                     <div class="dv_input">
                         <input type="text" name="email" id="email" placeholder="E-mail*" onkeyup="validateEmail()">
                         <i class="fa fa-check" id="eFormValid"></i> 
                         <i class="fa fa-times" id="eFormError"></i> 
-                        <label id="emailPrompt"></label>
+                        <label for="email" id="emailPrompt"></label>
                     </div>    
                     <br>
                     <div class="dv_input">
                         <input type="text" name="subject" id="onderwerp" placeholder="Subject*" onkeyup="validateSubject()">
                         <i class="fa fa-check" id="sFormValid"></i> 
                         <i class="fa fa-times" id="sFormError"></i> 
-                        <label id="onderwerpPrompt"></label>
+                        <label for="subject" id="onderwerpPrompt"></label>
                     </div>    
                     <br>
                     <div class="dv_input">
                         <textarea id="bericht" name="message" placeholder="Message" onkeyup="validateMessage()"></textarea>
                         <i class="fa fa-check" id="mFormValid"></i> 
                         <i class="fa fa-times" id="mFormError"></i> 
-                        <label id="berichtPrompt"></label>
+                        <label for="message" id="berichtPrompt"></label>
                      </div>   
                     <br>
                     <div class="send_btn">
